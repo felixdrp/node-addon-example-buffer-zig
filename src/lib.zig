@@ -5,11 +5,6 @@ const c = @cImport({
 });
 
 const std = @import("std");
-// Allocator 
-// https://ziglearn.org/chapter-2/
-// https://ziglang.org/documentation/master/#Choosing-an-Allocator
-var gpa = std.heap.GeneralPurposeAllocator(.{}){};
-const allocator = gpa.allocator();
 
 fn nativeFunction(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.napi_value {
     // Generic vars
@@ -43,6 +38,9 @@ fn nativeFunction(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.na
     var buffer_pointer: ?*anyopaque = undefined;
 
     // Get memory
+    // Allocator 
+    // https://ziglearn.org/chapter-2/
+    // https://ziglang.org/documentation/master/#Choosing-an-Allocator
     // https://ziglang.org/documentation/master/#Memory
     // https://github.com/ziglang/zig/issues/3952
     var retval_buf = std.heap.raw_c_allocator.alloc(u8, buffer_size) catch |err| { // <-- capture err here
