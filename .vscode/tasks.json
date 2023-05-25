@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "bdev",
+			"problemMatcher": [],
+			"label": "npm: bdev",
+			"detail": "mkdir -p dist && ZIG_SYSTEM_LINKER_HACK=1 zig build-lib -mcpu=baseline -ODebug -dynamic -lc -isystem deps/node-$(node --version)/include/node src/lib.zig -fallow-shlib-undefined -femit-bin=dist/lib.node",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

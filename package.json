@@ -1,0 +1,15 @@
+{
+  "name": "addon-example-buffer-zig",
+  "version": "1.0.0",
+  "description": "Example of addon using Zig. How to access Buffers in Zig",
+  "main": "index.js",
+  "scripts": {
+    "bdev": "mkdir -p dist && ZIG_SYSTEM_LINKER_HACK=1 zig build-lib -mcpu=baseline -ODebug -dynamic -lc -isystem deps/node-$(node --version)/include/node src/lib.zig -fallow-shlib-undefined -femit-bin=dist/lib.node",
+    "build": "mkdir -p dist && ZIG_SYSTEM_LINKER_HACK=1 zig build-lib -mcpu=baseline -OReleaseSafe -dynamic -lc -isystem deps/node-$(node --version)/include/node src/lib.zig -fallow-shlib-undefined -femit-bin=dist/lib.node",
+    "exec": "node example.js",
+    "bun": "bun example.js",
+    "postinstall": "./download-node-headers.sh"
+  },
+  "author": "Felixdrp",
+  "license": "ISC"
+}
