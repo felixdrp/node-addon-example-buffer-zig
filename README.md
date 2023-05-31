@@ -6,6 +6,10 @@ This example is based on:<br>
  - [https://blog.risingstack.com/using-buffers-node-js-c-plus-plus/](https://blog.risingstack.com/using-buffers-node-js-c-plus-plus/)
  - [https://github.com/freezer333/nodecpp-demo/blob/master/buffers/basic/buffer_example.cpp](https://github.com/freezer333/nodecpp-demo/blob/master/buffers/basic/buffer_example.cpp)
 
+### Other examples by @felixdrp
+
+ - [node-addon-example-function-call-zig](https://github.com/felixdrp/node-addon-example-function-call-zig)
+
 ## Node.js Native Module written in Zig
 
 This project is an example Hello World for making a Node.js native module in Zig. To install Zig:
