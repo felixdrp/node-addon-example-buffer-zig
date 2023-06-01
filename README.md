@@ -26,7 +26,7 @@ Run this project like this:
 git clone https://github.com/felixdrp/node-addon-example-function-call-zig.git
 
 # 2. Download Node.js header files
-npm install
+npm run postinstall
 
 # 3. Compile the Zig module and produce `dist/lib.node`
 npm run build
