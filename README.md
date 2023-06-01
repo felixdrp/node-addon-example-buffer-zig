@@ -23,7 +23,7 @@ The entry point is `src/lib.zig`.
 Run this project like this:
 ```bash
 # 1. Git clone it
-git clone https://github.com/felixdrp/node-addon-example-function-call-zig.git
+git clone https://github.com/felixdrp/node-addon-example-buffer-zig.git
 
 # 2. Download Node.js header files
 npm run postinstall
