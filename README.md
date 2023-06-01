@@ -1,8 +1,9 @@
 # node-addon-example-buffer-zig <img alt="Zig Logo" src="https://raw.githubusercontent.com/ziglang/logo/master/zig-logo-dark.svg" width="200">
 
-Example of addon using [Zig lang](https://ziglang.org/). How to access Buffers in Zig. For more info about `C/C++ addons with Node-API`, see [C/C++ addons with Node-API](https://nodejs.org/api/n-api.html) [[github]](https://github.com/nodejs/node/blob/main/doc/api/n-api.md).
+Example of addon using [Zig lang](https://ziglang.org/). How to access Buffers in Zig.<br>
+For more info about `C/C++ addons with Node-API`, see [C/C++ addons with Node-API](https://nodejs.org/api/n-api.html) [[github]](https://github.com/nodejs/node/blob/main/doc/api/n-api.md).<br>
 
-This example is based on:<br>
+This example is based on:
  - [https://blog.risingstack.com/using-buffers-node-js-c-plus-plus/](https://blog.risingstack.com/using-buffers-node-js-c-plus-plus/)
  - [https://github.com/freezer333/nodecpp-demo/blob/master/buffers/basic/buffer_example.cpp](https://github.com/freezer333/nodecpp-demo/blob/master/buffers/basic/buffer_example.cpp)
 
