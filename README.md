@@ -8,7 +8,7 @@ This example is based on:
  - [https://github.com/freezer333/nodecpp-demo/blob/master/buffers/basic/buffer_example.cpp](https://github.com/freezer333/nodecpp-demo/blob/master/buffers/basic/buffer_example.cpp)
 
 ### Other examples by @felixdrp
-
+ - [https://github.com/felixdrp/node-addon-example-async-work-thread-safe-function-zig](https://github.com/felixdrp/node-addon-example-async-work-thread-safe-function-zig)
  - [node-addon-example-function-call-zig](https://github.com/felixdrp/node-addon-example-function-call-zig)
 
 ## Node.js Native Module written in Zig
