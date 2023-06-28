@@ -32,7 +32,7 @@ fn nativeFunction(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.na
     status = c.napi_get_value_uint32(env, argv[1], &size);
     // Get rotation amount
     status = c.napi_get_value_uint32(env, argv[2], &rot_32);
-    var rot: u8 = @intCast(u8, rot_32);
+    var rot: u8 = @intCast(rot_32);
 
     var buffer_size: usize = @as(usize, size);
     var buffer_pointer: ?*anyopaque = undefined;
@@ -49,7 +49,7 @@ fn nativeFunction(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.na
     };
 
     // Convert pointer type Slice to array
-    var retval: [*c]u8 = @ptrCast([*c]u8, retval_buf.ptr);
+    var retval: [*c]u8 = @ptrCast(retval_buf.ptr);
 
     // Get buffer pointer
     status = c.napi_get_buffer_info(env,
@@ -59,7 +59,7 @@ fn nativeFunction(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.na
     );
     
     // Change pointer type from ?*anyopaque (void *) to pointer C to u8 array
-    var buffer: [*c]u8 = @intToPtr([*c]u8, @ptrToInt(buffer_pointer));
+    var buffer: [*c]u8 = @ptrCast(buffer_pointer);
 
     var i: u32 = 0;
     while (i < size) : ( i+=1 ) {
@@ -71,7 +71,7 @@ fn nativeFunction(env: c.napi_env, info: c.napi_callback_info) callconv(.C) c.na
 // https://github.com/nodejs/node/blob/main/src/node_api.cc#L1011
 // https://github.com/nodejs/nan/blob/main/doc/buffers.md#api_nan_new_buffer
     status = c.napi_create_external_buffer(env, buffer_size,
-        @intToPtr(?*anyopaque, @ptrToInt(retval_buf.ptr)),
+        @ptrCast(retval_buf.ptr),
         null,
         null,
         &result
