@@ -18,7 +18,8 @@ const buf4 = Buffer.from('ABC');
 
 let buffer = buf4;
 
-let result = example.rotate(buffer, buffer.length, 13);
+let result = example.rotate(buffer, buffer.length, 1);
+// Result BCD with rotate = 1
 
 console.log(buffer.toString('ascii'));
 console.log(result.toString('ascii'));
